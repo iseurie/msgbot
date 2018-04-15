@@ -8,8 +8,8 @@ from colored import fg, bg, attr
 
 client = Bot(command_prefix=None, pm_help=False)
 ostreamHandles = {}
-EMAIL = 'iseurie@gmail.com'
-PASS = 'colts gotta fap'
+EMAIL = ''
+PASS = ''
 LOG = True
 
 
@@ -34,7 +34,7 @@ async def on_message(message):
         print(f'{fg(3)}open `{opath}`{attr(0)}')
     ostrm = ostreamHandles[oid]
     if doAppendHeaders:
-        await ostrm.write(','.join(headers) _ '\n')
+        await ostrm.write(','.join(headers) + '\n')
 
     timestamp = int(time.time())
     payload = {'when': timestamp,
